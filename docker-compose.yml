@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  frontend:
+    build: ./PersonalBlogFrontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  backend:
+    build: ./PersonalBlogBackend
+    ports:
+      - "5000:5000"
+    environment:
+      - NOTION_TOKEN=${NOTION_TOKEN}
+      - NOTION_DATABASE_ID=${NOTION_DATABASE_ID}
