@@ -1,0 +1,3 @@
+[submodule "PersonalBlogFrontend"]
+	path = PersonalBlogFrontend
+	url = https://github.com/oscarthf/PersonalBlogFrontend
