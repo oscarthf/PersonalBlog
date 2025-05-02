@@ -4,7 +4,7 @@ services:
   frontend:
     build: ./PersonalBlogFrontend
     environment:
-      - VITE_API_BASE_URL=/api
+      - VITE_API_BASE_URL=${VITE_API_BASE_URL}
     networks:
       - app-network
 
@@ -27,9 +27,13 @@ services:
     depends_on:
       - frontend
       - backend
+    command: ["nginx", "-g", "daemon off;"]
     networks:
       - app-network
 
 networks:
   app-network:
     driver: bridge
+
+# to build and run the containers, use:
+# docker-compose up --build

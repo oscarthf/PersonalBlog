@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: personal-blog
+    env: docker
+    plan: free  # or standard/pro depending on your needs
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    buildFilter:
+      paths:
+        - Dockerfile
+        - start.sh
+        - nginx.conf
+        - PersonalBlogBackend/**
+        - PersonalBlogFrontend/**
+    envVars:
+      - key: NOTION_TOKEN
+        sync: false  # Set manually in Render dashboard
+      - key: NOTION_DATABASE_ID
+        sync: false
+      - key: VITE_API_BASE_URL
+        value: /api
+        sync: false  # Set manually in Render dashboard
+    envVarsFromFile: false
+    region: oregon
+    ports:
+      - 80
