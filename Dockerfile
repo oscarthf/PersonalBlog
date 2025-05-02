@@ -39,7 +39,4 @@ WORKDIR /app
 EXPOSE 80
 CMD ["/start.sh"]
 
-# build the container using the command below
-# docker build -t personal-blog:latest .
-# run the container using the command below
-# docker run -d -p 80:80 personal-blog:latest
+# for use in render.com
