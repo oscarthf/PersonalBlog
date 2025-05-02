@@ -21,7 +21,7 @@ FROM node:18-slim
 RUN apt-get update && apt-get install -y nginx && rm -rf /var/lib/apt/lists/*
 
 # Copy Nginx config
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY render.nginx.conf /etc/nginx/nginx.conf
 
 # Copy built frontend static files
 COPY --from=frontend /frontend/dist /usr/share/nginx/html
@@ -38,3 +38,8 @@ RUN chmod +x /start.sh
 WORKDIR /app
 EXPOSE 80
 CMD ["/start.sh"]
+
+# build the container using the command below
+# docker build -t personal-blog:latest .
+# run the container using the command below
+# docker run -d -p 80:80 personal-blog:latest
