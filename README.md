@@ -30,7 +30,7 @@ VITE_API_BASE_URL="/api"
 ```
 0. Create a blank text file called ".env" with no other extension.
 1. Copy the above environment variables and remove the place holders.
-2. Follow the steps bellow to obtain the above environment variables.
+2. Follow the steps below to obtain the above environment variables.
 ```
 
 ## To create Notion API Token and Database ID:
