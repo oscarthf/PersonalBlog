@@ -13,6 +13,7 @@ services:
     environment:
       - NOTION_TOKEN=${NOTION_TOKEN}
       - NOTION_DATABASE_ID=${NOTION_DATABASE_ID}
+      - PRODUCTION_URL=${PRODUCTION_URL}
     networks:
       - app-network
 

@@ -17,6 +17,8 @@ services:
         sync: false  # Set manually in Render dashboard
       - key: NOTION_DATABASE_ID
         sync: false
+      - key: PRODUCTION_URL
+        sync: false  # Set manually in Render dashboard
       - key: VITE_API_BASE_URL
         value: /api
         sync: false  # Set manually in Render dashboard
