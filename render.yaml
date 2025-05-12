@@ -14,14 +14,16 @@ services:
         - PersonalBlogFrontend/**
     envVars:
       - key: NOTION_TOKEN
-        sync: false  # Set manually in Render dashboard
-      - key: NOTION_DATABASE_ID
+        sync: false # Set manually in Render dashboard
+      - key: NOTION_POSTS_DATABASE_ID
+        sync: false
+      - key: NOTION_SECTIONS_DATABASE_ID
         sync: false
       - key: PRODUCTION_URL
-        sync: false  # Set manually in Render dashboard
+        sync: false
       - key: VITE_API_BASE_URL
         value: /api
-        sync: false  # Set manually in Render dashboard
+        sync: false
     envVarsFromFile: false
     region: oregon
     ports:
