@@ -14,6 +14,9 @@ WebGL for background animation
 ## To do:
 
 ```
+0. Improve UI/UX
+1. Finish WebGL background animation
+2. Add caching to backend
 ```
 
 ## Environment Variables needed:
@@ -22,8 +25,8 @@ WebGL for background animation
 NOTION_TOKEN=<NOTION_TOKEN>
 NOTION_POSTS_DATABASE_ID=<NOTION_POSTS_DATABASE_ID>
 NOTION_SECTIONS_DATABASE_ID=<NOTION_SECTIONS_DATABASE_ID>
-PRODUCTION_URL=<PRODUCTION_URL>
 VITE_API_BASE_URL="/api"
+PRODUCTION_URL=<PRODUCTION_URL (not needed for described deployments)>
 ```
 
 ## To create .env file
@@ -37,26 +40,66 @@ VITE_API_BASE_URL="/api"
 ## To create Notion API Token and Database ID:
 
 ```
+0. Create a Notion account.
+1. Create a Notion integration and obtain the API token.
+2. Create a Notion database for blog posts and obtain the database ID.
+    * Select new blank page.
+    * Type /database and select Database (full page).
+    * Select the new table and rename it to Posts.
+    * Add the following properties (and types):
+        * Name (title)
+        * Slug (text)
+        * Published (checkbox)
+        * Date (date)
+        * Content (text)
+3. Create a Notion database for sections and obtain the database ID.
+    * Select new blank page.
+    * Type /database and select Database (full page).
+    * Select the new table and rename it to Sections.
+    * Add the following properties (and types):
+        * Name (title)
+        * HTMLContent (text)
+        * Section (text)
+    * Currently the sections are hardcoded in the frontend (["home", "blog", "about"]), but this will be changed in the future.
 ```
 
 ## For Local Deployment (With Docker):
 
 ```
+0. Install Docker Desktop.
+1. Clone this repository using the command:
+    git clone --recurse-submodules https://github.com/oscarthf/PersonalBlog
+2. Navigate to the root directory of the repository.
+3. Run the command:
+    docker-compose up --build
 ```
 
 ## For Local Deployment (No Docker):
 
 ```
+0. Install Node.js and npm.
+1. Clone this repository using the command:
+    git clone --recurse-submodules
+2. Navigate to the root directory of the repository.
+3. ...
 ```
 
 ## For render.com deployment:
 
 ```
+0. Create a render.com account.
+1. Create a new web service.
+2. Fork this repository.
+2. Connect using GitHub and allow render.com to access this repository and its submodules (https://github.com/oscarthf/PersonalBlogBackend, https://github.com/oscarthf/PersonalBlogFrontend).
+3. Set the environment variables in the render.com dashboard.
+4. Select Docker as the build method (this uses Dockerfile, not docker-compose.yml).
+5. (Optional) Set a custom domain.
 ```
 
 ## Image sources:
 
 ```
-moon.png: https://www.goodfreephotos.com/astrophotography/close-up-of-the-moon-detail.jpg.php
-opal.png: https://www.publicdomainpictures.net/en/view-image.php?image=627379&picture=opal-gemstone-stone-clipart-png
+The following images were modified and used in the WebGL background animation.
+    * moon.png: https://www.goodfreephotos.com/astrophotography/close-up-of-the-moon-detail.jpg.php
+    * opal.png: https://www.publicdomainpictures.net/en/view-image.php?image=627379&picture=opal-gemstone-stone-clipart-png
 ```
