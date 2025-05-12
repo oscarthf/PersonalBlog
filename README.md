@@ -14,7 +14,7 @@ WebGL for background animation
 ## To do:
 
 ```
-0. Add caching to backend
+0. Add AWS Deployment instructions.
 ```
 
 ## Environment Variables needed:
