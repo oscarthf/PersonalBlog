@@ -12,7 +12,8 @@ services:
     build: ./PersonalBlogBackend
     environment:
       - NOTION_TOKEN=${NOTION_TOKEN}
-      - NOTION_DATABASE_ID=${NOTION_DATABASE_ID}
+      - NOTION_POSTS_DATABASE_ID=${NOTION_POSTS_DATABASE_ID}
+      - NOTION_SECTIONS_DATABASE_ID=${NOTION_SECTIONS_DATABASE_ID}
       - PRODUCTION_URL=${PRODUCTION_URL}
     networks:
       - app-network
