@@ -14,9 +14,7 @@ WebGL for background animation
 ## To do:
 
 ```
-0. Improve UI/UX
-1. Finish WebGL background animation
-2. Add caching to backend
+0. Add caching to backend
 ```
 
 ## Environment Variables needed:
@@ -61,6 +59,7 @@ PRODUCTION_URL=<PRODUCTION_URL (not needed for described deployments)>
         * HTMLContent (text)
         * Section (text)
     * Currently the sections are hardcoded in the frontend (["home", "blog", "about"]), but this will be changed in the future.
+4. Make sure to remove any smart links in the Notion database. Links will work as long as you select the text in Notion and click "Remove link" in the menu. You should not be able to click the link when editing in Notion.
 ```
 
 ## For Local Deployment (With Docker):
