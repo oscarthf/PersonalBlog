@@ -105,3 +105,9 @@ The following images were modified and used in the WebGL background animation.
     * moon.png: https://www.goodfreephotos.com/astrophotography/close-up-of-the-moon-detail.jpg.php
     * opal.png: https://www.publicdomainpictures.net/en/view-image.php?image=627379&picture=opal-gemstone-stone-clipart-png
 ```
+
+## GLSL Noise:
+
+```
+3D noise function is coppied from https://stegu.github.io/webgl-noise/webdemo/
+```
