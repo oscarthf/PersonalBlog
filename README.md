@@ -14,7 +14,8 @@ WebGL for background animation
 ## To do:
 
 ```
-0. Add AWS Deployment instructions.
+0. Add AWS Deployment instructions. (LOW PRIORITY, MEDIUM)
+1. Add dynamic page addition or removal from Notion. (MEDIUM PRIORITY, MEDIUM)
 ```
 
 ## Environment Variables needed:
@@ -60,7 +61,7 @@ PRODUCTION_URL=<PRODUCTION_URL (not needed for described deployments)>
         * Header (text)
         * Content (text)
     * Currently the sections are hardcoded in the frontend (["home", "blog", "about"]), but this will be changed in the future.
-4. Currenty the header and content may contain breaks using "\n" and links using the format:
+4. Currenty the header and content may contain using the format:
     [Display text](https://www.yourpage.com)
 ```
 
