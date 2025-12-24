@@ -1,5 +1,5 @@
 # Backend build stage
-FROM node:18 AS backend
+FROM node:22 AS backend
 WORKDIR /backend
 COPY PersonalBlogBackend/package*.json ./
 RUN npm install
@@ -7,7 +7,7 @@ COPY PersonalBlogBackend ./
 RUN npm run build
 
 # Frontend build stage
-FROM node:18 AS frontend
+FROM node:22 AS frontend
 WORKDIR /frontend
 COPY PersonalBlogFrontend/package*.json ./
 RUN npm install
@@ -15,7 +15,7 @@ COPY PersonalBlogFrontend ./
 RUN npm run build
 
 # Final stage with both Nginx and Node
-FROM node:18-slim
+FROM node:22-slim
 
 # Install Nginx
 RUN apt-get update && apt-get install -y nginx && rm -rf /var/lib/apt/lists/*
